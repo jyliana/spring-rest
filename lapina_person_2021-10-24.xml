@@ -1,0 +1,47 @@
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">    
+	<book>
+        <genre>Fantasy</genre>
+        <author>J K Rowling</author>
+        <title>Harry Potter and the Sorcerer's Stone</title>
+        <year>1997</year>
+        <series>Harry Potter</series>
+        <price>20.00</price>
+    </book>
+    <book>
+        <genre>Fantasy</genre>
+        <author>J K Rowling</author>
+        <title>Harry Potter and the Chamber of Secrets</title>
+        <year>1998</year>
+        <series>Harry Potter</series>
+        <price>20.00</price>
+    </book>
+	<book>
+        <genre>Fantasy</genre>
+        <author>J K Rowling</author>
+        <title> The Ickabog</title>
+        <year>2020</year>        
+        <price>30.00</price>
+    </book>
+	<book>
+        <genre>Fantasy</genre>
+        <author>J K Rowling</author>
+        <title>The Christmas Pig</title>
+        <year>2021</year>        
+        <price>15.00</price>
+    </book>	
+	<book>
+        <genre>Fantasy</genre>
+        <author>Carol Goodman</author>
+        <title>The Angel Stone</title>
+        <year>2013</year>
+        <series>Fairwick Chronicles</series>
+        <price>12.0</price>
+    </book>
+    <book>
+        <genre>Mystery</genre>
+        <author>Carol Goodman</author>
+        <title>The Night Villa</title>
+        <year>2008</year>
+        <price>10.0</price>
+    </book>
+</bookstore>

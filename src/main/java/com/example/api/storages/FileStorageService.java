@@ -29,6 +29,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 @Service
 public class FileStorageService {
@@ -132,5 +133,14 @@ public class FileStorageService {
             }
         }
         return false;
+    }
+
+    public Stream<Path> getFilesBy(String parameter) {
+        final Path root = Paths.get(fileStorageLocation.toString());
+        try {
+            return Files.walk(root, 1).filter(path -> path.toString().contains(parameter)).map(root::relativize);
+        } catch (IOException e) {
+            throw new RuntimeException("Could not load the files!");
+        }
     }
 }

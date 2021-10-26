@@ -1,0 +1,26 @@
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">    
+	<book>
+        <genre>Fantasy</genre>
+        <author>Sarah J Maas</author>
+        <title>House of Earth and Blood</title>
+        <year>2020</year>
+        <series>Crescent City</series>
+        <price>15.00</price>
+    </book>
+    <book>
+        <genre>Mystery</genre>
+        <author>John Grisham</author>
+        <title>The Judge's List</title>
+        <year>2021</year>
+        <series>Lacy Stoltz</series>
+        <price>11.0</price>
+    </book>
+    <book>
+        <genre>Fantasy</genre>
+        <author>Carol Goodman</author>
+        <title>The Water Witch</title>
+        <year>2013</year>
+        <series>Fairwick Chronicle</series>
+        <price>10.0</price>
+    </book>   
+</bookstore>
