@@ -7,8 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,17 +32,25 @@ public class FileController {
     private FileStorageService fileStorageService;
 
     @PostMapping("/uploadFile")
-    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
+    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) {
         File returnedFile = fileStorageService.validateAndConvert(file).get();
         fileStorageService.uploadFile(returnedFile);
         return getFileResponse(returnedFile);
     }
 
     @PostMapping("/replaceFile")
-    public UploadFileResponse replaceFile(@RequestParam("file") MultipartFile file) throws IOException {
+    public UploadFileResponse replaceFile(@RequestParam("file") MultipartFile file) {
         File returnedFile = fileStorageService.validateAndConvert(file).get();
         fileStorageService.updateFile(returnedFile);
         return getFileResponse(returnedFile);
+    }
+
+    @DeleteMapping("/deleteFile/{fileName:.+}")
+    public ResponseEntity<String> deleteFile(@PathVariable String fileName) {
+        boolean result = fileStorageService.delete(fileName);
+
+        return result ? ResponseEntity.ok().body(fileName + " was successfully deleted") :
+                new ResponseEntity<>(fileName + " cannot be deleted", HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/downloadFile/{fileName:.+}")

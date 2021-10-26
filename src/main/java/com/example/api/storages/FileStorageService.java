@@ -120,4 +120,17 @@ public class FileStorageService {
         }
         return jsonFile;
     }
+
+    public boolean delete(String fileName) {
+        Path targetLocation = fileStorageLocation.resolve(fileName);
+        if (Files.exists(targetLocation)) {
+            try {
+                Files.delete(targetLocation);
+                return true;
+            } catch (IOException e) {
+                throw new FileStorageException("File cannot be deleted " + fileName);
+            }
+        }
+        return false;
+    }
 }
