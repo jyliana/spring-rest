@@ -1,0 +1,36 @@
+[ {
+  "genre" : "Fantasy",
+  "author" : "Sarah J Maas",
+  "title" : "House of Earth and Blood",
+  "year" : 2020,
+  "series" : "Crescent City",
+  "price" : 150.0
+}, {
+  "genre" : "Mystery",
+  "author" : "John Grisham",
+  "title" : "The Judge's List",
+  "year" : 2021,
+  "series" : "Lacy Stoltz",
+  "price" : 110.0
+}, {
+  "genre" : "Fantasy",
+  "author" : "Carol Goodman",
+  "title" : "The Water Witch",
+  "year" : 2013,
+  "series" : "Fairwick Chronicle",
+  "price" : 100.0
+}, {
+  "genre" : "Fantasy",
+  "author" : "Carol Goodman",
+  "title" : "The Angel Stone",
+  "year" : 2013,
+  "series" : "Fairwick Chronicles",
+  "price" : 120.0
+}, {
+  "genre" : "Mystery",
+  "author" : "Carol Goodman",
+  "title" : "The Night Villa",
+  "year" : 2008,
+  "series" : null,
+  "price" : 100.0
+} ]
